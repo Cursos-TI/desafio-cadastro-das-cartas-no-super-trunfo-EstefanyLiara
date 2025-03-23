@@ -81,7 +81,7 @@ int main() {
     int num_cartas = 0, opcao, atributo, c1, c2;
 
     printf("========================================="
-           "\n  Bem-vindo ao Super Trunfo Novato!\n"
+           "\n  Bem-vindo ao Super Trunfo Aventureiro!\n"
            "=========================================");
 
     do {
