@@ -5,7 +5,7 @@
 
 typedef struct {
     char estado[50];
-    int codigo;
+    char codigo[50];
     char nome[50];
     int populacao;
     double pib;
@@ -24,7 +24,7 @@ double calcularPibPerCapita(Carta c) {
 void exibirCarta(Carta c, int indice) {
     printf("\n--- Carta %d ---\n", indice + 1);
     printf("Estado: %s\n", c.estado);
-    printf("Codigo: %d\n", c.codigo);
+    printf("Codigo: %s%s\n",c.estado, c.codigo);
     printf("Cidade: %s\n", c.nome);
     printf("Populacao: %d\n", c.populacao);
     printf("PIB: %.2f bilhoes\n", c.pib);
@@ -81,7 +81,7 @@ int main() {
     int num_cartas = 0, opcao, atributo, c1, c2;
 
     printf("========================================="
-           "\n  Bem-vindo ao Super Trunfo Aventureiro!\n"
+           "\n  Bem-vindo ao Super Trunfo!\n"
            "=========================================");
 
     do {
@@ -102,7 +102,7 @@ int main() {
                     strtok(cartas[num_cartas].estado, "\n");
         
                     printf("Codigo: ");
-                    scanf("%d", &cartas[num_cartas].codigo);
+                    scanf("%s", &cartas[num_cartas].codigo);
         
                     printf("Nome da cidade: ");
                     getchar();  // Limpa o buffer antes de ler a string do nome da cidade
